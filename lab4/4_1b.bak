@@ -1,0 +1,30 @@
+PROGRAM PaulRevere(INPUT, OUTPUT);
+VAR
+  Lanterns,P,V,T,H: CHAR;
+BEGIN
+  READ(Lanterns);
+  IF Lanterns = '1'
+  THEN
+    BEGIN
+      P := 'l';
+      V := 'a';
+      T := 'n';
+      H := 'd';
+    END
+  ELSE
+    IF Lanterns = '2'
+    THEN
+       BEGIN
+        P := 's';
+        V := 'e';
+        T := 'a';
+        H := ' ';
+       END
+    ELSE
+    P:= '5';
+    IF P = '5'
+    THEN
+      WRITELN('The North Church shows only ''',Lanterns, '''.')
+    ELSE
+    WRITELN('The British are coming by ',P,V,T,H)
+END.

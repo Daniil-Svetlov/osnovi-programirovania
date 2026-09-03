@@ -1,0 +1,46 @@
+PROGRAM CountChars;
+VAR
+  C: CHAR;
+  D1, D2 , D3, D4 :CHAR;
+BEGIN
+  D1 := '0';
+  D2 := '0';
+  D3 := '0';
+  D4 := '0';
+  READ(C);
+  while c <> '#'
+  DO
+    BEGIN
+      IF D4 < '9'
+      THEN
+        D4 := chr(ord(D4) + 1)
+      ELSE
+      BEGIN
+        D4 := '0';
+        IF D3 < '9'
+      THEN
+        D3 := chr(ord(D3) + 1)
+      ELSE
+      BEGIN
+        D3 := '0';
+        IF D2 < '9'
+      THEN
+        D2 := chr(ord(D2) + 1)
+      ELSE
+      BEGIN
+        D2 := '0';
+        IF D1 < '9'
+      THEN
+        D1 := chr(ord(D1) + 1)
+        ELSE
+        BEGIN
+          WRITELN('OVER');
+          HALT;
+        END;
+      END;
+    END;
+  END;
+  READ(C);
+  END;
+  WRITELN('Number of characters is  ', D2,D3,D4);
+END.
